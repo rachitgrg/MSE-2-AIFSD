@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 // Use environment variable in production, fallback to proxy in development
-const BASE_URL = import.meta.env.VITE_API_URL || '/api';
+const BASE_URL = import.meta.env.VITE_API_URL 
+  || (import.meta.env.DEV ? '/api' : 'https://lost-found-backend-gr2n.onrender.com/api');
 
 const API = axios.create({
   baseURL: BASE_URL,
