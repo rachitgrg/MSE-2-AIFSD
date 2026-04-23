@@ -31,15 +31,15 @@ API.interceptors.response.use(
 );
 
 // Auth APIs
-export const registerUser = (data) => API.post('/register', data);
-export const loginUser = (data) => API.post('/login', data);
+export const registerUser = (data) => API.post('register', data);
+export const loginUser = (data) => API.post('login', data);
 
 // Item APIs
-export const getAllItems = () => API.get('/items');
-export const getItemById = (id) => API.get(`/items/${id}`);
-export const addItem = (data) => API.post('/items', data);
-export const updateItem = (id, data) => API.put(`/items/${id}`, data);
-export const deleteItem = (id) => API.delete(`/items/${id}`);
-export const searchItems = (query) => API.get(`/items/search?name=${query}`);
+export const getAllItems = () => API.get('items');
+export const getItemById = (id) => API.get(`items/${id}`);
+export const addItem = (data) => API.post('items', data);
+export const updateItem = (id, data) => API.put(`items/${id}`, data);
+export const deleteItem = (id) => API.delete(`items/${id}`);
+export const searchItems = (query) => API.get(`items/search?name=${query}`);
 
 export default API;
