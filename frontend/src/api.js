@@ -1,7 +1,10 @@
 import axios from 'axios';
 
+// Use environment variable in production, fallback to proxy in development
+const BASE_URL = import.meta.env.VITE_API_URL || '/api';
+
 const API = axios.create({
-  baseURL: '/api',
+  baseURL: BASE_URL,
 });
 
 // Attach JWT token to every request automatically
